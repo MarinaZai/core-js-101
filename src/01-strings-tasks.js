@@ -220,7 +220,6 @@ function getRectangleString(width, height) {
   const topSide = topLeftCorner + sideSymbolOne.repeat(widthString) + topRightCorner;
   const sidesRightAndLeft = oneSide.repeat(heightString);
   const bottomSide = bottomLeftCorner + sideSymbolOne.repeat(widthString) + bottomRightCorner;
-
   return topSide + sidesRightAndLeft + bottomSide;
 }
 
@@ -287,8 +286,68 @@ function isString(value) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-function getCardId(/* value */) {
-  throw new Error('Not implemented');
+function getCardId(value) {
+  const cardsInitial = [
+    'A♣',
+    '2♣',
+    '3♣',
+    '4♣',
+    '5♣',
+    '6♣',
+    '7♣',
+    '8♣',
+    '9♣',
+    '10♣',
+    'J♣',
+    'Q♣',
+    'K♣',
+    'A♦',
+    '2♦',
+    '3♦',
+    '4♦',
+    '5♦',
+    '6♦',
+    '7♦',
+    '8♦',
+    '9♦',
+    '10♦',
+    'J♦',
+    'Q♦',
+    'K♦',
+    'A♥',
+    '2♥',
+    '3♥',
+    '4♥',
+    '5♥',
+    '6♥',
+    '7♥',
+    '8♥',
+    '9♥',
+    '10♥',
+    'J♥',
+    'Q♥',
+    'K♥',
+    'A♠',
+    '2♠',
+    '3♠',
+    '4♠',
+    '5♠',
+    '6♠',
+    '7♠',
+    '8♠',
+    '9♠',
+    '10♠',
+    'J♠',
+    'Q♠',
+    'K♠',
+  ];
+  let result;
+  for (let i = 0; i < cardsInitial.length; i += 1) {
+    if (cardsInitial[i] === value) {
+      result = i;
+    }
+  }
+  return result;
 }
 
 module.exports = {

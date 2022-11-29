@@ -366,7 +366,7 @@ function sortDigitNamesByNumericOrder(arr) {
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
 function getItemsSum(arr) {
-  const result = arr.reduce((partialSum, a) => partialSum + a, 0);
+  const result = arr.reduce((sum, a) => sum + a, 0);
   return result;
 }
 
